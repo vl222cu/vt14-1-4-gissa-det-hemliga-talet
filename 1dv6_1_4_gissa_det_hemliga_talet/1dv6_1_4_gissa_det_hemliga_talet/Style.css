@@ -1,1 +1,7 @@
-﻿
+﻿#MyForm {
+	font-family: "Verdana", "Arial", sans-serif;
+}
+
+#ValidationSummary1 {
+    color: #DB0000;
+}
