@@ -26,14 +26,29 @@
 			MaximumValue="100" MinimumValue="1" Display="None"></asp:RangeValidator>
 		<%-- Skickaknapp--%>
 		<asp:Button ID="SendButton" runat="server" Text="Skicka gissning" OnClick="SendButton_Click" />
+		
+		<%-- Presentation av gissningar och resultat--%>
+		<asp:PlaceHolder ID="PlaceHolder1" runat="server">
+			<p>
+				<asp:Label ID="ShowGuessLabel" runat="server" Text="Test1"></asp:Label>
+			</p>
+		</asp:PlaceHolder>
+		<asp:PlaceHolder ID="PlaceHolder2" runat="server">
+			<p>
+				<asp:Label ID="ShowResultLabel" runat="server" Text="Test2"></asp:Label>
+			</p>
+		</asp:PlaceHolder>
+		<asp:PlaceHolder ID="PlaceHolder3" runat="server">
+			<p>
+				<asp:Button ID="NewSecretNoButton" runat="server" Text="Slumpa nytt hemligt tal" OnClick="NewSecretNoButton_Click" />
+			</p>
+		</asp:PlaceHolder>
+		
+		<%-- Valideringsfelmeddelanden--%>
 		<p>
-			<asp:Label ID="ShowGuessLabel" runat="server" Text=""></asp:Label>
-		</p>
-		<p>
-			<%-- Valideringsfelmeddelanden--%>
 			<asp:ValidationSummary ID="ValidationSummary1" runat="server"
 				HeaderText="Ett fel inträffade! Korrigera felet och gör ett nytt försök." />
-			</p>
+		</p>
     </div>
     </form>
 </body>
