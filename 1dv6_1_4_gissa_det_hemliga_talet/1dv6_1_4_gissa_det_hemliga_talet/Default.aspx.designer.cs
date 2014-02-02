@@ -76,6 +76,15 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet {
         protected global::System.Web.UI.WebControls.Button SendButton;
         
         /// <summary>
+        /// ShowGuessLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ShowGuessLabel;
+        
+        /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>

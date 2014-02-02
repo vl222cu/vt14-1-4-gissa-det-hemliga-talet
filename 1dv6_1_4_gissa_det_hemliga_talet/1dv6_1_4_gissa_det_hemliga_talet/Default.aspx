@@ -25,12 +25,15 @@
 			ErrorMessage="Ange ett tal mellan 1 och 100"
 			MaximumValue="100" MinimumValue="1" Display="None"></asp:RangeValidator>
 		<%-- Skickaknapp--%>
-		<asp:Button ID="SendButton" runat="server" Text="Skicka gissning" />
+		<asp:Button ID="SendButton" runat="server" Text="Skicka gissning" OnClick="SendButton_Click" />
+		<p>
+			<asp:Label ID="ShowGuessLabel" runat="server" Text=""></asp:Label>
+		</p>
 		<p>
 			<%-- Valideringsfelmeddelanden--%>
 			<asp:ValidationSummary ID="ValidationSummary1" runat="server"
 				HeaderText="Ett fel inträffade! Korrigera felet och gör ett nytt försök." />
-		</p>
+			</p>
     </div>
     </form>
 </body>

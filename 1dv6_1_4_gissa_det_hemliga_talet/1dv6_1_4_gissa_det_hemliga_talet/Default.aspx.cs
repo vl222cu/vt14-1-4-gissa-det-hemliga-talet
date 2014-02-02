@@ -13,5 +13,13 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet
 		{
 
 		}
+
+		protected void SendButton_Click(object sender, EventArgs e)
+		{
+			if (IsValid) 
+			{
+				ShowGuessLabel.Text = "You did it!";
+			}
+		}
 	}
 }
