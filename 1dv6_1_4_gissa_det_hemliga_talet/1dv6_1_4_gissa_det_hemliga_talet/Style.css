@@ -5,3 +5,8 @@
 #ValidationSummary1 {
     color: #DB0000;
 }
+
+/*<---------Styling errorsidan--------->*/
+h1, h2, #error, a {
+    font-family: "Verdana", "Arial", sans-serif;
+}

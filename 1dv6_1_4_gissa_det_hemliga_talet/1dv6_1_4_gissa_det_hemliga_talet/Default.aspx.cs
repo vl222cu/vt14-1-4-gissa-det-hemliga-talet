@@ -14,13 +14,17 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet
 			PlaceHolder1.Visible = false;
 			PlaceHolder2.Visible = false;
 			PlaceHolder3.Visible = false;
+			GuessTextBox.Focus();
 		}
 
 		protected void SendButton_Click(object sender, EventArgs e)
 		{
 			if (IsValid) 
 			{
+				PlaceHolder1.Visible = true;
 				PlaceHolder3.Visible = true;
+				ShowGuessLabel.Text = String.Format(" <img src='Images/close16.png' /> U did it!");
+
 			}
 		}
 

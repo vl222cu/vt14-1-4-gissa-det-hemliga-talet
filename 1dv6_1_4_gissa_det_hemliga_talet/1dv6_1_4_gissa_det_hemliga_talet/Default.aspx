@@ -27,23 +27,24 @@
 		<%-- Skickaknapp--%>
 		<asp:Button ID="SendButton" runat="server" Text="Skicka gissning" OnClick="SendButton_Click" />
 		
-		<%-- Presentation av gissningar och resultat--%>
+		<%-- Presentation av gissningar--%>
 		<asp:PlaceHolder ID="PlaceHolder1" runat="server">
 			<p>
 				<asp:Label ID="ShowGuessLabel" runat="server" Text="Test1"></asp:Label>
 			</p>
 		</asp:PlaceHolder>
+		<%-- Presentation av resultat--%>
 		<asp:PlaceHolder ID="PlaceHolder2" runat="server">
 			<p>
 				<asp:Label ID="ShowResultLabel" runat="server" Text="Test2"></asp:Label>
 			</p>
 		</asp:PlaceHolder>
+		<%-- Knapp som ska generera nytt hemligt nummer--%>
 		<asp:PlaceHolder ID="PlaceHolder3" runat="server">
 			<p>
 				<asp:Button ID="NewSecretNoButton" runat="server" Text="Slumpa nytt hemligt tal" OnClick="NewSecretNoButton_Click" />
 			</p>
-		</asp:PlaceHolder>
-		
+		</asp:PlaceHolder>	
 		<%-- Valideringsfelmeddelanden--%>
 		<p>
 			<asp:ValidationSummary ID="ValidationSummary1" runat="server"

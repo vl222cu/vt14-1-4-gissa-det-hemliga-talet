@@ -58,6 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Error.html" />
+    <Content Include="Images\alert16.png" />
+    <Content Include="Images\check1.png" />
+    <Content Include="Images\close16.png" />
+    <Content Include="Images\down16.png" />
+    <Content Include="Images\up16.png" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
