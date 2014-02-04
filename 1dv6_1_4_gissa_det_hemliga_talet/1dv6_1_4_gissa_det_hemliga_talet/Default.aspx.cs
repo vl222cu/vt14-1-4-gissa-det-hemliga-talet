@@ -29,7 +29,7 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			GuessTextBox.Focus();
+
 		}
 
 		protected void SendButton_Click(object sender, EventArgs e)
@@ -38,19 +38,20 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet
 			{
 				int choice = int.Parse(GuessTextBox.Text);
 				Outcome answer = SecretNumber.MakeGuess(choice);
+				PlaceHolder1.Visible = true;
 				ShowGuessLabel.Text = string.Join(", ", SecretNumber.PreviousGuesses);
 				
 				if (answer == Outcome.High)
 				{
-					ShowGuessLabel.Text = String.Format(" {0} <img src='Images/up16.png' /> För högt!", choice);
+					ShowGuessLabel.Text += String.Format("<img src='Images/up16.png' /> För högt!");
 				}
 				else if (answer == Outcome.Low)
 				{
-					ShowGuessLabel.Text = String.Format(" {0} <img src='Images/down16.png' /> För lågt!", choice);
+					ShowGuessLabel.Text += String.Format("<img src='Images/down16.png' /> För lågt!");
 				}
 				else if (answer == Outcome.Correct)
 				{
-					ShowResultLabel.Text = String.Format(" <img src='Images/check1.png' /> Grattis! Du klarade det på {0} försök", SecretNumber.Count);
+					ShowResultLabel.Text = String.Format("<img src='Images/check1.png' /> Grattis! Du klarade det på {0} försök", SecretNumber.Count);
 					GuessTextBox.Enabled = false;
 					SendButton.Enabled = false;
 					PlaceHolder2.Visible = true;
@@ -58,7 +59,7 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet
 				}
 				else if (answer == Outcome.PreviousGuess)
 				{
-					ShowGuessLabel.Text = String.Format(" {0} <img src='Images/alert16.png' /> Du har redan gissat på talet", choice);
+					ShowGuessLabel.Text += String.Format("<img src='Images/alert16.png' /> Du har redan gissat på talet");
 				}
 				else if (answer == Outcome.NoMoreGuesses)
 				{
@@ -68,13 +69,13 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet
 					PlaceHolder2.Visible = true;
 					PlaceHolder3.Visible = true;
 				}
-				PlaceHolder1.Visible = true;
 			}
 		}
 
 		protected void NewSecretNoButton_Click(object sender, EventArgs e)
 		{
-
+			Session.Clear();
+			Response.Redirect("Default.aspx");
 		}
 	}
 }

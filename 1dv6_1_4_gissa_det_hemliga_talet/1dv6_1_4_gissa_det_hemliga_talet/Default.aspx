@@ -52,5 +52,10 @@
 		</p>
     </div>
     </form>
+	<script type="text/javascript">
+		document.getElementById("GuessTextBox").focus();
+		document.getElementById("GuessTextBox").select();
+		document.getElementById("NewSecretNoButton").focus();
+	</script>
 </body>
 </html>
