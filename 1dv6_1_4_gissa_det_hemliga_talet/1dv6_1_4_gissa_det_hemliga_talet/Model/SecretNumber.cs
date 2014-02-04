@@ -8,6 +8,7 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet.Model
 {
 	public enum Outcome { Indefinite, Low, High, Correct, NoMoreGuesses, PreviousGuess };
 
+
 	public class SecretNumber
 	{
 		//Fält
@@ -16,20 +17,21 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet.Model
 		public const int MaxNumberOfGuesses = 7;
 
 		// Ger ett värde som indikerar om en gissning kan göras eller inte
-		public bool CanMakeGuess
+		public bool CanMakeGuess 
 		{
 			get
 			{
-				return !(PreviousGuesses.Count == MaxNumberOfGuesses 
+				return !(_previousGuesses.Count == MaxNumberOfGuesses
 					|| Outcome.PreviousGuess == Outcome.NoMoreGuesses);
 			}
 		}
 
 		// Ger antalet gjorda gissningar 
-		public int Count
-		{
-			get { return PreviousGuesses.Count; }
+		public int Count 
+		{ 
+			get { return _previousGuesses.Count; }
 		}
+		
 
 		// Sätter det hemliga talet
 		public int? Number
@@ -56,8 +58,6 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet.Model
 		// Initierar klassens medlemmar
 		public void Initialize()
 		{
-			_number = 0;
-
 			_previousGuesses.Clear();
 			Outcome = Outcome.Indefinite;
 			Random randomNumber = new Random();
@@ -86,6 +86,7 @@ namespace _1dv6_1_4_gissa_det_hemliga_talet.Model
 			{
 				return Outcome.PreviousGuess;
 			}
+			_previousGuesses.Add(guess);
 
 			if (guess > _number)
 			{
