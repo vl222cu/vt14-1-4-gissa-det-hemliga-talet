@@ -2,8 +2,82 @@
 	font-family: "Verdana", "Arial", sans-serif;
 }
 
+#maincontainer {
+    width: 700px;
+    height: 400px;
+    margin: auto;
+	background: #777;
+	padding: 20px;
+	overflow: hidden;
+	color: #FFF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 5px 10px rgba(25,25,25,0.1);
+    -webkit-box-shadow: 0 0 5px 10px rgba(25,25,25,0.1);
+    box-shadow: 0 0 5px 10px rgba(25,25,25,0.1);
+    background: -webkit-gradient(radial, 430 50, 0, 430 50, 312, from(#4F7D44), to(#253B20));
+    background: -webkit-radial-gradient(center 10% 20deg, circle cover, #4F7D44 20%, #253B20 50%);
+    background: -moz-radial-gradient(center 10% 20deg, circle cover, #4F7D44 20%, #253B20 50%);
+    background: -o-radial-gradient(center 10% 20deg, circle cover, #4F7D44 20%, #253B20 50%);
+}
+
+#content {
+	margin-left: 140px;
+	text-shadow: 3px 3px 0 #1F1D1D;
+	font-weight: bolder;
+}
+
+#textboxcontainer {
+	margin-top: 50px;
+}
+
 #ValidationSummary1 {
-    color: #DB0000;
+    color: #ff0000;
+}
+
+#SendButton,
+#NewSecretNoButton {
+	width: auto;  
+	padding: 3px;
+    font-family: "Verdana", "Arial", sans-serif;
+    font-size: 11px;
+	-moz-box-shadow: 0 0 4px 0 #777;
+	-webkit-box-shadow: 0 0 4px 0 #777;
+	box-shadow: 0 0 4px 0 #777;
+	-webkit-border-radius: 5px;  
+    -moz-border-radius: 5px;  
+    border-radius: 5px;
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(237,237,237)),
+		color-stop(0.41, rgb(217,217,217)),
+		color-stop(1, rgb(255,255,255))
+	);
+	background: -webkit-linear-gradient( 
+	    center bottom,
+		rgb(237,237,237) 0%,
+		rgb(217,217,217) 41%,
+		rgb(255,255,255) 100%
+	);
+	background: -moz-linear-gradient(
+		center bottom,
+		rgb(237,237,237) 0%,
+		rgb(217,217,217) 41%,
+		rgb(255,255,255) 100%
+	);
+	background: -o-linear-gradient(
+	    center bottom,
+		rgb(237,237,237) 0%,
+		rgb(217,217,217) 41%,
+		rgb(255,255,255) 100%
+	);
+}
+
+img {
+	margin-left: 15px;
 }
 
 /*<---------Styling errorsidan--------->*/
